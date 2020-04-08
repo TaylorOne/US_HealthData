@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "U.S. Health Data";
+}
+
+<div class="container">
+    <div class="item-a">
+        <div class="logotype">
+            U.S.<br>
+            HEALTH<br>
+            DATA
+        </div>
+    </div>
+    <div class="item-b">
+        <div class="chart-container" style="margin-top: 10px">
+            <canvas id="myChart" width="400" height="266"></canvas>
+            <script>
+                var data1 = {
+                    labels: ['00','01','02','03',"04","05","06","07","08","09","10","11","12","13","14","15","16","17"],
+                    datasets: [{
+                        label: 'national rank',
+                        data: [25,21,18,16,15,15,16,18,21,25,29,32,34,35,34,32,29,25],
+                        backgroundColor: '#FFF',
+                        borderColor: '#F8C471',
+                        borderWidth: 2,
+                        fill: 'start',
+                        spanGaps: false,
+                        responsive: false
+                    }]
+                };
+
+                var ctx = document.getElementById("myChart").getContext('2d');
+
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data1,
+                    options: {
+                        legend: { display: true,
+                                position: 'bottom',
+                                labels: {
+                                    boxWidth: 20
+                                }
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    max: 50,
+                                    reverse: true,
+                                    beginAtZero: true,
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    <div class="item-c">
+        <span class="head">CLINICAL CARE</span><br>
+        <div id="clinical_care">
+            <span class="spacer_text_head">00&nbsp;&nbsp;</span><a>Dentists</a><br>
+            <span class="spacer_text_head">00&nbsp;&nbsp;</span><a>Low Birthweight</a><br>
+            <!-- <span class="spacer_text_head">00&nbsp;&nbsp;</span><a>Mental Health Providers</a><br> -->
+            <span class="spacer_text_head">00&nbsp;&nbsp;</span><a>Preventable Hospitalizations</a><br>
+            <span class="spacer_text_head">00&nbsp;&nbsp;</span><a>Primary Care Physicians</a>
+        </div>
+    </div>
+    <div class="item-d">
+        <span class="head">OUTCOMES</span><br>
+        <div id="outcomes">
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Cancer Deaths</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Cardiovascular Deaths</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Diabetes</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Disparity in Health Status</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Frequent Mental Distress</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Frequent Physical Distress</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Infant Mortality</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Premature Death</a>
+        </div>
+        <br><br>
+        <span class="head">BEHAVIORS</span><br>
+        <div id="behaviors">
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Drug Deaths</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Excessive Drinking</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>High School Graduation</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Obesity</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Physical Inactivity</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Smoking</a>
+        </div>
+    </div>
+    <div class="item-e">
+        <div id="header"></div>
+        <div id="stateInfo"></div>
+    </div>
+    <div class="item-f">
+        <span class="head">POLICY</span><br>
+        <div id="policy">
+            <!--<span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunization HPV Females</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunization HPV Males</a><br> -->
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunization Meningococcal</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunization Tdap</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunizations - Adolescents</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Immunizations - Children</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Public Health Funding</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Uninsured</a>
+        </div>
+        <br><br>
+        <span class="head">COMMUNITY & ENVIRONMENT</span><br>
+        <div id="community">
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Air Pollution</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Children in Poverty</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Infectious Disease</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Chlamydia</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Pertussis</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Salmonella</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Occupational Fatalities</a><br>
+            <span class="spacer_text">00&nbsp;&nbsp;</span><a>Violent Crime</a><br>
+            <span class="spacer_text">00<br>00<br>00<br>00<br></span>
+        </div>
+    </div>
+    <div class="item-g">
+        <div id="map" style="width: 465px; height: 295px"></div>
+        <div id="legend">
+            <div class="legend_descriptor" style="background-color: rgb(245, 183, 177)">1 - 10</div>
+            <div class="legend_descriptor" style="background-color: rgb(241, 148, 138)">11 - 20</div>
+            <div class="legend_descriptor" style="background-color: rgb(236, 112, 99)">21 - 30</div>
+            <div class="legend_descriptor" style="background-color: rgb(231, 76, 60)">31 - 40</div>
+            <div class="legend_descriptor" style="background-color: rgb(203, 67, 53)">41 - 50</div>
+        </div>
+    </div>
+    <div class="item-h">
+        <div id="directions">
+            To explore U.S. health data by <b><i>measure,</i></b>
+            click on the links at the sides of the page.<br><br>To explore the data by
+            <b><i>state,</i></b> click on the U.S. map to the left<br><br><br><br><div id="source">Source: <i>America's Health Rankings Composite Measure</i></div>
+        </div>
+    </div>
+</div>

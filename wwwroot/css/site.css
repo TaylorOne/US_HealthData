@@ -1,0 +1,219 @@
+html, body {
+    font-family: "Calibri", sans-serif;
+    /* background-color: #FCF3CF; */
+    background-image: url("/images/background3.png");
+    background-repeat: repeat-x;
+}
+
+h1 {
+    line-height: 1;
+}
+
+h3 {
+    line-height: 1;
+    letter-spacing: 0px;
+}
+
+hr {
+    border-top: 2px solid #FAD7A0;
+}
+
+a {
+    text-decoration: none;
+    color: #AAA;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#map {
+    margin-top: -70px;
+    padding-top: 20px;
+    /* background-color: #fff8e1; */
+}
+
+#directions {
+    width: 80%;
+    line-height: 1.5;
+    font-size: 1em;
+    color: #7eb967;
+}
+
+#stateInfo {
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #F8C471;
+}
+
+#legend {
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+#source {
+    color: #AAA;
+}
+
+#source_head {
+    color: #000;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+#header {
+    margin-top: 0px;
+}
+
+.legend_descriptor {
+    display: inline-block;
+    text-align: center;
+    width: 19%;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.bad {
+    color: #F76;
+}
+
+.good {
+    color: #7eb967;
+}
+
+.spacer_text {
+    color: #FFF8E1;
+}
+
+.spacer_text_head {
+    color: #FCF3CF;
+}
+
+.logotype {
+    font-family: Constantia;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 1.25;
+    padding-top: 10px;
+    color: #444;
+}
+
+.entry {
+    width: 100%;
+}
+
+.number {
+    float: right;
+}
+
+.head {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #F8C471;
+    text-decoration: none;
+    /* border-bottom: 2px solid #FAD7A0; */
+}
+
+.item-a {
+    grid-area: title;
+}
+
+.item-b {
+    grid-area: measures1;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 10px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-c {
+    grid-area: map;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: .80;
+    letter-spacing: 4px;
+    padding: 5px 0 0 0px;
+    color: #F8C471;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-d {
+    grid-area: directions;
+    font-family: "Cambria", serif;
+    color: #444;
+}
+
+.item-e {
+    grid-area: measures2;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 10px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-f {
+    grid-area: measures3;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 5px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-g {
+    grid-area: head;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: .80;
+    letter-spacing: 2px;
+    padding: 5px 0 0 0px;
+    color: #F8C471;
+}
+
+.item-h {
+    grid-area: measures4;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 5px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-i {
+    grid-area: chart;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 10px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+.item-j {
+    grid-area: source;
+    color: #AAA;
+    line-height: 1.5;
+    padding-top: 10px;
+    /* border-top: 2px solid #FAD7A0; */
+    /* background-color: #fff8e1; */
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 250px 75px auto;
+    grid-column-gap: 30px;
+    grid-template-areas: "title title title title title"
+        "measures1  map map directions measures2"
+        "measures3  head  head  head measures4"
+        "measures3  chart  chart  source measures4";
+}
